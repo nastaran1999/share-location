@@ -1,4 +1,4 @@
-import MyMap2 from './components/MyMap2';
+import Map2 from './components/Map2';
 import Form from './components/Form';
 import { DataProvider } from './DataContext';
 import { BrowserRouter as Switch, Route } from "react-router-dom";
@@ -12,7 +12,7 @@ function App() {
             <Form /> 
           </Route>
           <Route path="/map">
-            <MyMap2 />
+            <Map2 />
           </Route>
         </Switch>
       </DataProvider>

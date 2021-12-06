@@ -8,7 +8,7 @@ import { DataContext } from '../DataContext'
 
 
 function FormComponent() {
-    const {userInfo, removePost} = useContext(DataContext)
+    const {userInfo, addLocation} = useContext(DataContext)
     const history = useHistory();
 
     const [newLocation, setNewLocation] = useState<any>()
@@ -35,8 +35,8 @@ function FormComponent() {
         if(newLocation === null || locationName === '' || locationType === '' || locationFile === '') {
             return
         }
-        removePost({
-            location: { lat: newLocation.lat, lng: newLocation.lng },
+        addLocation({
+            location: [ newLocation.lat, newLocation.lng ],
             locationName: locationName,
             locationType: locationType,
             logoAddress: locationFile,
